@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background-color: #e0e0e0;
+}
+
+#bus-forward {
+	flex-grow: 0;
+}
+
+#contents-wrapper {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+
+	padding: 50px 50px;
+
+	gap: 20px;
+}
+
+.banner {
+	flex-grow: 0;
+	width: 200px;
+}
+
+#timetable-wrapper {
+	position: relative;
+
+	flex-grow: 1;
+	height: 100%;
+	max-height: 900px;
+	background-color: azure;
+	border-radius: 30px;
+	filter: drop-shadow(5px 5px 10px #00000030);
+	padding-bottom: 20px;
+}
+
+#current-time {
+	position: absolute;
+	top: -100px;
+	left: 20px;
+
+	font-size: 50px;
+}
+
+#timetable {
+	width: 100%;
+	height: 100%;
+}
+
+.bg-color {
+	background-color: rgb(132, 186, 236);
+}
+
+header {
+	display: flex;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding: 50px;
+}
+
+.table-wrapper {
+	display: grid;
+	grid-template-rows: 50px repeat(6, 1fr);
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	color: #222;
+}
+
+.table-row {
+	display: grid;
+	/* 1列目: 200px (固定), 2列目: 可変 (1fr), 3列目: 300px (固定) */
+	grid-template-columns: 250px 1fr 300px;
+}
+
+.table-row:last-child {
+	border-bottom: none; /* 最後の行の下線は不要 */
+}
+
+/* 各列のスタイル */
+.col-1,
+.col-2,
+.col-3,
+.t-col-1,
+.t-col-2,
+.t-col-3 {
+	padding: 10px;
+
+	display: flex; /* 内部のテキストを中央揃えにするため */
+	align-items: center; /* 垂直方向中央揃え */
+	justify-content: center;
+}
+
+.col-3 {
+	border-right: none; /* 最後の列の右線は不要 */
+}
+
+/* 2列目の内部ラッパー */
+.col-2-inner-wrapper {
+	display: flex;
+	width: 100%; /* 親要素 (col-2) の幅に合わせる */
+	align-items: center; /* 垂直方向中央揃え */
+}
+
+.col-2-fixed-left {
+	flex-shrink: 0; /* 縮小しない */
+	width: 25%; /* 固定幅 */
+	text-align: right; /* 右揃え */
+	box-sizing: border-box;
+}
+
+.col-2-flexible-right {
+	flex-grow: 1; /* 残りのスペースを全て占める */
+	text-align: center;
+	margin-right: 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.col-1 {
+	font-size: 50px;
+	text-align: center;
+}
+.col-2 {
+	font-size: 50px;
+}
+.col-3 {
+	font-size: 50px;
+	text-align: center;
+}
+
+.t-col-1,
+.t-col-2,
+.t-col-3 {
+	justify-content: center;
+	text-align: center;
+	font-size: medium;
+}
+
+.t-col-2-inner-wrapper {
+	justify-content: center;
+}

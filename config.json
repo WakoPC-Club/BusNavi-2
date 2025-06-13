@@ -1,0 +1,8 @@
+{
+	"order": [
+		{ "dest": "tsurukawa", "lang": "jp" },
+		{ "dest": "tsurukawa", "lang": "en" },
+		{ "dest": "wakabadai", "lang": "jp" },
+		{ "dest": "wakabadai", "lang": "en" }
+	]
+}
