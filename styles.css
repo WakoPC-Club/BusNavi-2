@@ -24,7 +24,7 @@ body {
 	flex-grow: 1;
 	align-items: center;
 
-	padding: 50px 50px;
+	padding: 150px 50px;
 
 	gap: 20px;
 }
@@ -135,14 +135,14 @@ footer {
 }
 
 .col-1 {
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
 }
 .col-2 {
-	font-size: 50px;
+	font-size: 30px;
 }
 .col-3 {
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
 }
 
